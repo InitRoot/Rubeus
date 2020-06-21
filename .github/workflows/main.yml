@@ -27,4 +27,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: Rubeus
-        path: "D:/a/newbuild/"
+        path: "D:/a/Rubeus/Rubeus/Rubeus/bin/Release/"
