@@ -21,7 +21,9 @@ jobs:
       run: nuget restore Rubeus.sln
  
     - name: Build App
-      run: msbuild Rubeus.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+      run: |
+           echo "True" >> $ACTIONS_ALLOW_UNSECURE_COMMANDS
+           msbuild Rubeus.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
  
     - name: Upload artifact
       uses: actions/upload-artifact@v2
